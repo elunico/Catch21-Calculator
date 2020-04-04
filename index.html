@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch21 Odds Calculator</title>
+</head>
+<script src="libraries/p5.js"></script>
+<script src="libraries/p5.dom.js"></script>
+<script src="card.js"></script>
+<script src="sketch.js"></script>
+
+<body>
+
+  <h1> Probability Calculator for Catch 21</h1>
+  <p>
+    Use this tool to calculate the likelihood of outcomes in Catch 21. Green cards indicate the cards that are in play
+    and black cards indicate cards that are out of play and cannot be dealt. You enter a target and it will tell you the
+    odds of getting that.
+  </p>
+  <p>
+    For example, if you have 13 and obviously you need 21, make sure the cards are configured properly and then enter 8
+    into the box and press submit. The program will calculate the odds of you being able to get 8 more points by any
+    means such as 3 then 5 or a single 8 or two 4s etc. Then it will display the probability of that happening. It has
+    no limit on the number of "hits" it may require but it will show the odds of getting to exactly 21. Right now, the
+    odds of not busting are not calculated. They also cannot be simply calculated by using the program since the odds of
+    getting to 20 in any way possible overlap significantly with the odds of getting to 21. There is, therefore, <b>no
+      way
+      to calculate your not-busting odds.</b>
+  </p>
+  <div id="canvas-container"></div>
+
+</body>
+
+</html>
