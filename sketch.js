@@ -222,22 +222,25 @@ function preload() {
   }
 }
 
+const cardBuffer = 5;
 
 function setup() {
   // no animating and thats a lot of image() calls
-  frameRate(30);
-  let canvas = createCanvas(865, 450);
+  frameRate(24);
+  let canvas = createCanvas(
+      13 * (CARD_WIDTH + cardBuffer) + cardBuffer,
+      4 * (CARD_HEIGHT + cardBuffer) + cardBuffer);
   let canvasContainer = select('#canvas-container');
   canvas.parent(canvasContainer);
-  let xoff = 5;
-  let yoff = 5;
+  let xoff = cardBuffer;
+  let yoff = cardBuffer;
   for (let j of suits) {
     for (let i of numbers) {
       cards.push(new Card(i, j, xoff, yoff));
-      xoff += CARD_WIDTH + 5;
+      xoff += CARD_WIDTH + cardBuffer;
       if (xoff + CARD_WIDTH > width) {
-        xoff = 5;
-        yoff += CARD_HEIGHT + 5;
+        xoff = cardBuffer;
+        yoff += CARD_HEIGHT + cardBuffer;
       }
     }
   }
