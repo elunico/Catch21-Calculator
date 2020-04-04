@@ -14,8 +14,6 @@ const numbers =
     ['A'].concat(Array(9).fill(0).map((v, i) => i + 2)).concat(['J', 'Q', 'K']);
 const suits = [H, D, S, C];
 
-let images = {};
-
 let cards = [];
 let resetButton;
 let desireP;
@@ -213,14 +211,6 @@ function calculateOdds(target) {
   console.log(odds);
 }
 
-function preload() {
-  for (let i of numbers) {
-    for (let j of suits) {
-      let name = image_name_for(i, j);
-      images[name] = loadImage(`/assets/${name}.png`);
-    }
-  }
-}
 
 const cardBuffer = 5;
 
