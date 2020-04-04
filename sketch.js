@@ -212,7 +212,7 @@ function calculateOdds(target) {
 }
 
 
-const cardBuffer = 5;
+const cardBuffer = 8;
 
 function setup() {
   // no animating and thats a lot of image() calls

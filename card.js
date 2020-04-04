@@ -16,7 +16,7 @@ const unicode_suit = {
   'D': '♦'
 };
 
-const overDraw = 3;
+const overDraw = 4;
 
 class Card {
   constructor(number, suit, x, y) {
